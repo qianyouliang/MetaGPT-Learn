@@ -17,7 +17,7 @@ class CodeWrite(Action):
     name: str = "CodeWriter"
 
     async def run(self, requirements: str):
-        prompt = self.PROMPT_TEMPLATE.format(instruction=requirements)
+        prompt = self.PROMPT_TEMPLATE.format(requirements=requirements)
         rsp = await self._aask(prompt)
         code_text = CodeWrite.parse_code(rsp)
         return code_text
@@ -42,7 +42,7 @@ class CodeWriter(Role):
         初始化 CodeWriter 角色
         """
         super().__init__(**kwargs)  # 调用基类构造函数
-        self._init_action(CodeWrite)  # 为角色配备 CodeWrite 动作
+        self.set_actions([CodeWrite])  # 为角色配备 CodeWrite 动作
 
     async def _act(self) -> Message:
         """
