@@ -1,4 +1,5 @@
 MetaGPT/
 .MetaGPT/
-.config/
-config/
+.config/*
+config/*
+metagpt/
