@@ -3,3 +3,4 @@ MetaGPT/
 .config/*
 config/*
 metagpt/
+.env

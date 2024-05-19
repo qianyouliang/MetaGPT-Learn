@@ -1,0 +1,9 @@
+aiohttp
+discord
+aiocron
+beautifulsoup4
+pydantic
+pytz
+PyGithub
+fire
+metagpt
