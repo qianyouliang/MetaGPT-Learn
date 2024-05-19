@@ -139,7 +139,7 @@ class CrawlAction(Action):
                 repositories.append(repo_info)
                 # 将仓库信息添加到列表中
 
-        return json.dumps(repositories[:2])# 使用json.dumps将字典转换为JSON字符串，并存储到字符串中 返回爬取到的仓库信息列表
+        return json.dumps(repositories)# 使用json.dumps将字典转换为JSON字符串，并存储到字符串中 返回爬取到的仓库信息列表
 
 # Actions 的实现
 class AnalysisOSSRepository(Action):
